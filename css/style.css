@@ -14,7 +14,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
-  padding-top: 3em;
+  padding: 33px;
   position: relative;
   overflow: visible;
 }
@@ -115,6 +115,11 @@ div.details p span {
 }
 
 @media (min-width: 768px) {
+  h1 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 30px;
+  }
   header {
     height: 280px;
   }
