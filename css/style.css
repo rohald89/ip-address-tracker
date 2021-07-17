@@ -1,110 +1,172 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
 }
 
 .container {
-    text-align: center;    
+  text-align: center;
 }
 
 header {
-    background-image: url(../images/pattern-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 280px;
-    padding-top: 3em;
-    position: relative;
-    overflow: visible;
+  background-image: url(../images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  padding-top: 3em;
+  position: relative;
+  overflow: visible;
 }
 
 h1 {
-    color: #fff;
+  color: #fff;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
 }
 
 input {
-    border: none;
-    border-radius: 15px 0 0 15px;
-    margin: 0;
-    width: calc(555px - 58px);
-    padding-left: 24px;
+  border: none;
+  border-radius: 15px 0 0 15px;
+  margin: 0 auto;
+  width: calc(327px - 58px);
+  padding-left: 24px;
 }
-  
+
 input:focus {
-    outline: none;
+  outline: none;
 }
-  
+
 button {
-    color: white;
-    background-color: black;
-    outline: none;
-    border-radius: 0 15px 15px 0;
-    border: none;
-    margin: 0;
-    width: 58px;
+  color: white;
+  background-color: black;
+  outline: none;
+  border-radius: 0 15px 15px 0;
+  border: none;
+  margin: 0;
+  width: 58px;
 }
 
 button:hover {
-    background-color:rgba(46, 46, 46, 0.8);
-    cursor: pointer;
+  background-color: rgba(46, 46, 46, 0.8);
+  cursor: pointer;
 }
 
-.search{
-    display: flex;
-    height: 58px;
-    width: 555px;
-    margin: 31px auto 48px;
+.search {
+  display: flex;
+  height: 58px;
+  width: 327px;
+  margin: 31px auto 48px;
 }
-
 
 div#mapid {
-    height: calc(100vh - 280px);
+  height: calc(100vh - 300px);
 }
 
 div.details {
-    background-color: white;
-    width: 70%;
-    height: 161px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 37px 0;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
+  background-color: white;
+  width: 327px;
+  /* height: 161px; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  /* position: absolute; */
+  margin: 0 auto;
+  /* bottom: 0; */
+  /* left: 50%; */
+  /* transform: translate(-50%, 50%); */
 }
 
-div.details p{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-transform: uppercase;
-    color: rgba(46, 46, 46, 0.5);
-    text-align: left;
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: bold;
-    border-right: 1px solid rgb(204, 204, 204);
-    width: 277px;
-    padding: 0 32px;
+div.details p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  text-transform: uppercase;
+  color: rgba(46, 46, 46, 0.5);
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: bold;
+  letter-spacing: 1.46px;
+  margin-top: 24px;
+  padding: 0 24px;
 }
 
 div.details p:last-child {
-    border-right: none;
+  border-right: none;
+  margin-bottom: 24px;
 }
 
 div.details p span {
-    color: #2C2C2C;
+  color: #2c2c2c;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: -0.178571px;
+  margin-top: 7px;
+}
+
+#mapid {
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 280px;
+  }
+
+  .search {
+    width: 555px;
+  }
+
+  input {
+    width: calc(555px - 58px);
+  }
+
+  div.details {
+    width: 555px;
+  }
+
+  div#mapid {
+    height: calc(100vh - 280px);
+  }
+}
+
+@media (min-width: 1440px) {
+  div.details {
+    width: 1110px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 37px 0;
+  }
+
+  div.details p {
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-right: 1px solid rgb(204, 204, 204);
+    width: 277px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0 32px;
+    margin: 0;
+    letter-spacing: 1.75px;
+  }
+
+  div.details p:last-child {
+    border-right: none;
+  }
+
+  div.details p span {
     font-size: 26px;
     line-height: 30px;
     text-transform: capitalize;
     font-weight: 500;
-    letter-spacing: -0.232143px;
-    margin-top: 13px;
-}
-
-#mapid {
-    z-index: -1;
+    letter-spacing: -0.2321px;
+    margin-top: 7px;
+    text-align: left;
+  }
 }
